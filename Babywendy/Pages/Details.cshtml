@@ -1,0 +1,43 @@
+﻿@page
+@model Babywendy.Pages.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Wendy</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Wendy.Title)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Wendy.Title)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Wendy.PurchaseDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Wendy.PurchaseDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Wendy.Pokemon)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Wendy.Pokemon)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Wendy.Evolution)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Wendy.Evolution)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Wendy.ID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

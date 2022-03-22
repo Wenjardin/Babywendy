@@ -1,0 +1,46 @@
+﻿@page
+@model Babywendy.Pages.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Wendy</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Wendy.Title)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Wendy.Title)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Wendy.PurchaseDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Wendy.PurchaseDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Wendy.Pokemon)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Wendy.Pokemon)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Wendy.Evolution)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Wendy.Evolution)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Wendy.ID" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>
